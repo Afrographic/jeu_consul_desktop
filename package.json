@@ -1,0 +1,52 @@
+{
+  "name": "JeuConsult",
+  "author": {
+    "name": "Afrographix Studio",
+    "email": "bruneltesse@gmail.com"
+  },
+  "description": "JEU CONSULT™ is an innovative software solution designed to digitize patient consultation records and medical monitoring forms using cutting-edge technologies such as voice-to-text recognition, optical character recognition (OCR), and machine learning.",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    ".": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "Jeu Consult",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "icon.ico"
+    },
+    
+    "nsis": {
+      "oneClick": false,
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "uninstallDisplayName": "Jeu Consult Uninstall",
+      "license": "licence.md",
+      "allowToChangeInstallationDirectory": true
+    },
+    "linux": {
+      "target":"deb",
+      "icon":"icon.png",
+      "category":"Utility"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "icon.png"
+    }
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "auto-launch": "^5.0.6",
+    "electron-packager": "^17.1.1",
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "electron": "20.1.1",
+    "electron-builder": "^22.11.7"
+  }
+}
